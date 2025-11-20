@@ -1,0 +1,246 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+    color: #222;
+    overflow-x: hidden;
+}
+
+/* -------- GLOBAL ANIMATIONS -------- */
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.2s ease forwards;
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1.3s ease forwards;
+}
+
+.fade-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    animation: fadeLeft 1.3s ease forwards;
+}
+
+.fade-right {
+    opacity: 0;
+    transform: translateX(40px);
+    animation: fadeRight 1.3s ease forwards;
+}
+
+.zoom-in {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: zoomIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* -------- NAVBAR -------- */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #111;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffdd57;
+    transform: scale(1.1);
+}
+
+/* -------- HERO -------- */
+
+.hero {
+    height: 70vh;
+    background: url('images/hero.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 60px;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    text-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+/* -------- BUTTONS -------- */
+
+.btn {
+    padding: 12px 20px;
+    background: #111;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #333;
+    transform: translateY(-3px);
+}
+
+/* -------- BOOKING FORM -------- */
+
+.booking-section {
+    padding: 40px;
+    background: white;
+    text-align: center;
+}
+
+.booking-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.booking-form input,
+.booking-form select {
+    width: 100%;
+    padding: 10px;
+    transition: 0.3s ease;
+    border: 1px solid #ccc;
+}
+
+.booking-form input:hover,
+.booking-form select:hover,
+.contact-form input:hover,
+.contact-form textarea:hover {
+    border-color: #000;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #000;
+    box-shadow: 0 0 6px rgba(0,0,0,0.3);
+}
+
+/* -------- ROOMS -------- */
+
+.rooms-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.room-box {
+    background: white;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 450px;
+    padding: 20px;
+    border-radius: 6px;
+    transition: 0.35s ease;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.room-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.2);
+}
+
+.room-box img {
+    width: 100%;
+    border-radius: 6px;
+    transition: 0.4s ease;
+}
+
+.room-box:hover img {
+    transform: scale(1.05);
+}
+
+/* -------- ABOUT -------- */
+
+.about-section {
+    padding: 40px;
+    background: #eee;
+    text-align: center;
+}
+
+/* -------- CONTACT -------- */
+
+.contact-section {
+    padding: 40px;
+    background: white;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: grid;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+#results {
+    display: none !important;
+}
+
+
+/* -------- FOOTER -------- */
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
